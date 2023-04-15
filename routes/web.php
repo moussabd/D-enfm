@@ -21,7 +21,15 @@ Route::get('/', function () {
 
 
 
-Route::get('/accueil',[MyController::class, 'accueil']);
+Route::get('/accueil',[MyController::class, 'accueil'])->name('accueil');
+Route::get('/formation',[MyController::class, 'formation'])->name('formation');
+Route::get('/concours',[MyController::class, 'concour'])->name('concours');
+Route::get('/galerie',[MyController::class, 'galerie'])->name('galerie');
+Route::get('/contact',[MyController::class, 'contact'])->name('contact');
+
+
+
+
 Route::post('/savemail',[MyController::class,'savemail'])->name('emailSave');
 Route::get('/dashboard', function () {
     return view('dashboard');
